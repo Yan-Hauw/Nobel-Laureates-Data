@@ -44,10 +44,11 @@ for l in data["laureates"]:
     if "birth" in l.keys():
         if "date" in l["birth"].keys():
             date = ',"'+l["birth"]["date"]+'"'
-        if "city" in l["birth"].keys():
-            city = ',"'+l["birth"]["city"]+'"'
-        if "country" in l["birth"].keys():
-            country = ',"'+l["birth"]["country"]+'"'
+        if "place" in l["birth"].keys():
+            if "city" in l["birth"]["place"].keys():
+                city = ',"'+l["birth"]["place"]["city"]["en"]+'"'
+            if "country" in l["birth"]["place"].keys():
+                country = ',"'+l["birth"]["place"]["country"]["en"]+'"'
 
 
     birth_fp.write(id+date+city+country)
