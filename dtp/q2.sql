@@ -1,0 +1,1 @@
+select distinct affcountry from Affiliations where affname='CERN';
