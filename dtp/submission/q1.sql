@@ -1,1 +1,0 @@
-select id from Laureates where givenName='Marie' and familyName='Curie';
